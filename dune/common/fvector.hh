@@ -352,7 +352,7 @@ namespace Dune {
     FieldVector& operator=(const FieldVector<T, N>&) = delete;
 
     /** \brief Construct from a std::initializer_list */
-    FieldVector (std::initializer_list<K> const &l)
+    explicit FieldVector (std::initializer_list<K> const &l)
     {
       assert(l.size() == 1);
       _data = *l.begin();
